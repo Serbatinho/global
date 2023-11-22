@@ -1,0 +1,27 @@
+@import "../../../common/";
+
+@mixin ilimitedview-container {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .mid-content-container {
+        height: 100%;
+        width: clamp(360px, 85%, 1600px);
+        margin: $margin-mid-container-mobile;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .content-container {
+            margin: $margin-content-mobile;
+            padding: $padding-content-container;
+            width: 100%;
+            border-radius:$std-radius;
+            overflow: hidden;
+        }
+
+    }
+}
