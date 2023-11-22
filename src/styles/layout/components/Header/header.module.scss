@@ -1,3 +1,24 @@
+@import '../../../common';
+@import '../../assets';
+
+
 .full-content-container{
-    background-color: red;
+    @include ilimitedview-container;
+    padding: 0px;
+    margin: 0px;
+    min-height: 0px;
+    background-color: $background-color-secondary;
+
+    .mid-content-container{
+        padding: 0px;
+        margin: 0px;
+        .content-container{
+            padding: 0px;
+            margin: 0px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 }

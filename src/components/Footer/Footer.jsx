@@ -1,4 +1,5 @@
 import styles from '../../styles/layout/components/Footer/footer.module.scss'
+import Logo from '../Logo/Logo'
 
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
             <div className={`${styles['mid-content-container']}`} >
                 <div className={`${styles['content-container']}`} >
 
-                    <h2>Nome do Grupo</h2>
+                    < Logo />
 
                     <dl>
                         <div>
@@ -40,6 +41,8 @@ export default function Footer() {
                             <dd>Cargo: DB Developer</dd>
                         </div>
                     </dl>
+
+                    <p>Todo o conteúdo exibido neste site é de livre acesso. Copie à vontade.</p>
 
                 </div>
             </div>

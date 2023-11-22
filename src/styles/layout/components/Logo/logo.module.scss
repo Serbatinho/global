@@ -1,0 +1,26 @@
+@import '../../../common';
+
+.logo-container {
+    width: auto;
+    height: auto;
+}
+
+.logo {
+    border: 2.5px solid $main-theme-color;
+    border-radius: $std-radius;
+    color: $main-theme-color;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-size: 2em;
+    padding: 0.5em 0.8em;
+    margin: 0;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    font-family: calc($font-size * 3);
+
+    &:hover {
+        filter: blur(0.3px);
+        background-color: rgba($main-theme-color, 0.1);
+    }
+
+}

@@ -2,7 +2,7 @@
 
 .full-content-container{
     @include ilimitedview-container;
-    background-color: $background-color;
+    background-color: $background-color-secondary;
     min-height: 200px;
 
     .mid-content-container{
@@ -15,6 +15,10 @@
             flex-direction: column;
             align-items: center;
 
+
+            p{
+                margin-top: 5rem;
+            }
         }
     }
 }
@@ -29,7 +33,7 @@
 
         div{
             width: clamp(250px, 30%, 600px);
-            background-color: $background-color-secondary;
+            background-color: $background-color;
             padding: 0.5rem;
             border-radius: $std-radius;
             dt{
