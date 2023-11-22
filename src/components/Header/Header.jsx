@@ -8,10 +8,10 @@ export default function Header() {
             <div className={`${styles['mid-content-container']}`}>
                 <div className={`${styles['content-container']}`}>
                     <div>
-                        < Logo />
+                        < Logo fatherStyle={`${styles['logo-container']}`} />
                     </div>
 
-                    <div>
+                    <div className={`${styles['header-linktree']}`}>
                         <ul>
                             <li>Home</li>
                             <li>Cadastre-se</li>

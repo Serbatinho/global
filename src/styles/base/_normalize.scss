@@ -1,3 +1,18 @@
+a {
+  text-decoration: none; /* Remove sublinhado padrão */
+  color: inherit; /* Mantém a cor padrão do texto */
+}
+
+a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document

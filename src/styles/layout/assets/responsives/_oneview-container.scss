@@ -1,0 +1,30 @@
+@import "../../../common";
+
+@mixin oneview-container {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .mid-content-container {
+        height: 100%;
+        width: clamp(360px, 85%, 1400px);
+        margin: $margin-mid-container-mobile;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .content-container {
+            margin: $margin-content-mobile;
+            padding: $padding-content-container;
+            width: 100%;
+            border-radius:$std-radius;
+            overflow: hidden;
+            // box-shadow: $shadow-main-container;
+            
+        }
+
+    }
+}

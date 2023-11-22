@@ -8,7 +8,7 @@ export default function Footer() {
             <div className={`${styles['mid-content-container']}`} >
                 <div className={`${styles['content-container']}`} >
 
-                    < Logo />
+                    < Logo fatherStyle={`${styles['logo']}`} />
 
                     <dl>
                         <div>
