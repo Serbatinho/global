@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Titillium+Web&display=swap');
+$font-stack:'Roboto', sans-serif;
+$text-shadow: 1px 1.25px 5px rgba(0, 0, 0, 0.3);
+$text-color: rgb(30, 137, 156);
+$text-color-secondary: #a4a4a9;
+
+*{
+    font-family: $font-stack;
+    color: $text-color;
+    text-shadow: $text-shadow;
+    font-size: clamp(15px, 1.5vw, 18px)
+}
+
+h1 {
+    font-size: 1.75rem
+}
+
+h2 {
+    font-size: 1.5rem
+}
+
+h3 {
+    font-size: 1.25rem
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+$font-logo:'Kdam Thmor Pro', 'Roboto', cursive, sans-serif;
