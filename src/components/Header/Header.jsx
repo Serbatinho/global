@@ -22,6 +22,21 @@ export default function Header() {
                             </li>
                             <li>
                                 <Link href="/register">
+                                    Visualizar exames ja cadastrados
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/register">
+                                    Cadastrar um exame
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/register">
+                                    Adicionar recomendação ao exame
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/register">
                                     CADASTRO
                                 </Link>
                             </li>
