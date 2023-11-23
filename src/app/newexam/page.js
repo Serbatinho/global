@@ -1,18 +1,26 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../../styles/layout/app/newexam/newexam.module.scss'
 import { GETExamOptions, GETLabOptions } from '../api/newexam/route';
 
-export default async function Newexam() {
+export default function Newexam() {
     const [selectedLab, setSelectedLab] = useState(null);
+    const [examOption, setExamOption] = useState([]);
+    const [labOption, setLabOption] = useState([]);
 
-    const examoptionresponse = await GETExamOptions();
-    const examOption = await examoptionresponse;
-    console.log("/////////////////////////////");
-    console.log(examOption);
+    useEffect(() => {
+        async function fetchData() {
+            const examoptionresponse = await GETExamOptions();
+            const examOption = await examoptionresponse.json();
+            setExamOption(examOption);
 
-    const labOptionResponse = await GETLabOptions();
-    const labOption = await labOptionResponse.json();
+            const labOptionResponse = await GETLabOptions();
+            const labOption = await labOptionResponse.json();
+            setLabOption(labOption);
+        }
+
+        fetchData();
+    }, []);
 
     const handleLabChange = (e) => {
         const selectedLab = labOption.find(lab => lab.id === e.target.value);
