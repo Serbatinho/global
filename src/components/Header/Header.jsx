@@ -16,12 +16,12 @@ export default function Header() {
                     <div className={`${styles['header-linktree']}`}>
                         <ul>
                             <li>
-                                <Link href="/">
+                                <Link href="/login">
                                     LOGIN
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/register">
                                     CADASTRO
                                 </Link>
                             </li>
