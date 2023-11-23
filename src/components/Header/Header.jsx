@@ -32,7 +32,7 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/register">
+                                <Link href="/recommendation">
                                     RECOMENDAÇÕES EXAMES
                                     {/* Adicionar recomendação ao exame */}
                                 </Link>
