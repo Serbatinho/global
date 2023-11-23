@@ -21,6 +21,7 @@
 
             p{
                 margin-top: 5rem;
+                text-align: center;
             }
         }
     }
@@ -37,17 +38,20 @@
         div{
             width: clamp(250px, 30%, 600px);
             background-color: $background-color;
-            padding: 0.5rem;
+            padding: 1rem;
             border-radius: $std-radius;
             dt{
                 font-size: calc($font-size * 1.5);
                 // text-align: center;
                 margin-bottom: 1rem;
+                border-bottom: $std-border;
+                font-weight: bold;
 
             }
 
             dd{
                 margin: 0;
+                color: $text-color-secondary;
             }
 
         }

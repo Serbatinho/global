@@ -1,0 +1,19 @@
+@import '../../../common';
+@import '../effects/dynamic-border';
+
+@mixin noborder-button {
+    padding: 1rem 1.2rem 0.8rem 1.2rem;
+    color: $text-color;
+    border: 2.5px solid $main-theme-color;
+    background-color: $background-color;
+    border-radius: $std-radius;
+    text-decoration: none;
+    transition: ease-in-out all 0.1s;
+    cursor: pointer;
+
+    &:hover{
+        border-color: transparent;
+        background-color: $main-theme-color;
+        text-shadow: none;
+    }
+}

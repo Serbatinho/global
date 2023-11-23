@@ -2,5 +2,6 @@
 
 .full-content-container{
     @include oneview-container;
+    background-color: $background-color;
 
 }

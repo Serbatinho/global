@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import styles from '../../styles/layout/components/Header/header.module.scss'
 import Logo from '../Logo/Logo'
 
@@ -13,9 +15,21 @@ export default function Header() {
 
                     <div className={`${styles['header-linktree']}`}>
                         <ul>
-                            <li>Home</li>
-                            <li>Cadastre-se</li>
-                            <li>Login</li>
+                            <li>
+                                <Link href="/">
+                                    LOGIN
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/">
+                                    CADASTRO
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/">
+                                    EXAME
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
