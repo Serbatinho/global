@@ -1,0 +1,27 @@
+@import '../../assets';
+@import '../../../common';
+
+.full-content-container{
+    @include oneview-container;
+    background-color: $background-color;
+
+    .mid-content-container{
+        
+        .content-container{
+
+            form{
+                
+                &>*{
+                    color: $text-color-secondary;
+
+                    &>*{
+                        color: $text-color-secondary;
+                    }
+                }
+                
+            }
+
+        }
+
+    }
+}

@@ -1,33 +1,23 @@
-"use client";
 
-import { useState } from 'react';
 
-export default function Login() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleLogin = async () => {
-        const response = await fetch('/api/auth', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ action: 'login', username, password }),
-        });
-
-        if (response.ok) {
-            // Se o login for bem-sucedido, redirecione para outra página
-            window.location.href = '/home';
-        } else {
-            // Trate o erro de login
-            // Exemplo: exibir mensagem de erro
+export default async function Login() {
+    let email = 'silvaa_joao@gmail.com'
+    let password = 'js556677'
+    let auth = btoa(`${email}:${password}`)
+    let response = await fetch('http://localhost:8080/GSApi/api/paciente/auth', {
+        headers: {
+            'Authorization': `Basic ${auth}`
         }
-    };
+    })
+    let data = await response.json()
+    console.log(data)
 
     return (
         <div>
             <h1>Login</h1>
-            <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} />
-            <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-            <button onClick={handleLogin}>Login</button>
+            <input type="text" placeholder="Username"  />
+            <input type="password" placeholder="Password"  />
+            <button>Login</button>
         </div>
     );
 }
