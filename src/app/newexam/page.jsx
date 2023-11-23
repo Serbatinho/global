@@ -21,7 +21,8 @@ export default function Newexam() {
 
         // eu preciso de um json com o id principal do usuario lá no Login, de tipo de exame e do lab
         // especialização do exame
-        // glicemia precisa de um parametro e hemograma precisa de 11 parametros retornando em um json para retornar ao ronald 
+        // glicemia precisa de 10 parametro e hemograma precisa de 11 parametros retornando em um json para retornar ao ronald 
+        // ter classificação no cadastro mocada - por ultimo
 
         fetchData();
     }, []);
