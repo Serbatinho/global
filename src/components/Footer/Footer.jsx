@@ -20,7 +20,7 @@ export default function Footer() {
                         <div>
                             <dt>Gustavo Carvalho Noia</dt>
                             <dd>RM: 552466-1TDSS</dd>
-                            <dd>Cargo: JavaScript Developer</dd>
+                            <dd>Cargo: Java Developer</dd>
                         </div>
 
                         <div>

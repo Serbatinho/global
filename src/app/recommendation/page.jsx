@@ -1,7 +1,30 @@
-export default function Recomendation() {
+"use client";
+import { useState, useEffect } from 'react';
+import styles from '../../styles/layout/app/recommendation/recommendation.module.scss';
+
+export default function Recommendation() {
+    const [loggedUser, setLoggedUser] = useState(null);
+
+    useEffect(() => {
+        if (sessionStorage.getItem('user') === null) {
+            setLoggedUser(null);
+        } else {
+            setLoggedUser(JSON.parse(sessionStorage.getItem('user')));
+        }
+    }, []);
+
+    const handleButtonClick = () => {
+        console.log(loggedUser);
+    };
+
     return (
-        <div>
-            <h1>RECOMENDAÇÃO</h1>
-        </div>
-    )
+        <main className={`${styles['full-content-container']}`}>
+            <div className={`${styles['mid-content-container']}`}>
+                <div className={`${styles['content-container']}`}>
+                    <h1>RECOMENDAÇÕES</h1>
+                    <button onClick={handleButtonClick}>Exibir loggedUser</button>
+                </div>
+            </div>
+        </main>
+    );
 }

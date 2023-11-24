@@ -8,6 +8,26 @@ export default function Newexam() {
     const [password, setPassword] = useState('');
     const router = useRouter();
 
+    ///
+
+    const [loggedUser, setLoggedUser] = useState(null);
+
+    useEffect(() => {
+        if (sessionStorage.getItem('user') === null) {
+            setLoggedUser(null);
+        } else {
+            setLoggedUser(JSON.parse(sessionStorage.getItem('user')));
+        }
+    }, []);
+
+    useEffect(() => {
+        if (sessionStorage.getItem('user') !== null) {
+            router.push('/')
+        }
+    }, [router]);
+
+    ///
+
     useEffect(() => {
         if (sessionStorage.getItem('user') !== null) {
             router.push('/')
@@ -57,23 +77,39 @@ export default function Newexam() {
     };
 
     return (
-        <main className={`${styles['full-content-container']}`}>
-            <div className={`${styles['mid-content-container']}`}>
-                <div className={`${styles['content-container']}`}>
-                    <h1>Login</h1>
+        <>
 
-                    <form onSubmit={enviarLogin}>
-                        <label htmlFor="login">Login:</label>
-                        <input type="text" id="login" name="login" value={email} onChange={handleEmailChange} required />
+            {loggedUser ? (
+                <main className={`${styles['full-content-container']}`}>
+                    <div className={`${styles['mid-content-container']}`}>
+                        <div className={`${styles['content-container']}`}>
+                            <h1>RETORNANDO AO MENU</h1>
+                        </div>
+                    </div>
+                </main>
 
-                        <label htmlFor="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" value={password} onChange={handlePasswordChange} required />
+            ) : (
 
-                        <button type="submit">Entrar</button>
-                    </form>
-                </div>
-            </div>
-        </main>
+                <main className={`${styles['full-content-container']}`}>
+                    <div className={`${styles['mid-content-container']}`}>
+                        <div className={`${styles['content-container']}`}>
+                            <h1>Login</h1>
+
+                            <form onSubmit={enviarLogin}>
+                                <label htmlFor="login">Login:</label>
+                                <input type="text" id="login" name="login" value={email} onChange={handleEmailChange} required />
+
+                                <label htmlFor="senha">Senha:</label>
+                                <input type="password" id="senha" name="senha" value={password} onChange={handlePasswordChange} required />
+
+                                <button type="submit">Entrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            )}
+        </>
+
     );
 }
 
