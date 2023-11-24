@@ -96,11 +96,15 @@ export default function Newexam() {
                             <h1>Login</h1>
 
                             <form onSubmit={enviarLogin}>
-                                <label htmlFor="login">Login:</label>
-                                <input type="text" id="login" name="login" value={email} onChange={handleEmailChange} required />
+                                <div>
+                                    <label htmlFor="login">Login:</label>
+                                    <input type="text" id="login" name="login" value={email} onChange={handleEmailChange} required />
+                                </div>
 
-                                <label htmlFor="senha">Senha:</label>
-                                <input type="password" id="senha" name="senha" value={password} onChange={handlePasswordChange} required />
+                                <div>
+                                    <label htmlFor="senha">Senha:</label>
+                                    <input type="password" id="senha" name="senha" value={password} onChange={handlePasswordChange} required />
+                                </div>
 
                                 <button type="submit">Entrar</button>
                             </form>
