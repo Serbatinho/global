@@ -93,7 +93,7 @@ export default function Newexam() {
                 <main className={`${styles['full-content-container']}`}>
                     <div className={`${styles['mid-content-container']}`}>
                         <div className={`${styles['content-container']}`}>
-                            <h1>Login</h1>
+                            <h1>LOGIN:</h1>
 
                             <form onSubmit={enviarLogin}>
                                 <div>

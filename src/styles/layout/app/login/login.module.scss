@@ -33,8 +33,14 @@
 
                     input{
                         color: $background-color-secondary;
-                        min-width: 300px;
+                        max-width: 1vw;
+                        min-width: 280px;
                         margin-top: 0.5rem;
+                        height: 1.75rem;
+                        font-size: 1.5rem;
+                        padding: 0.25rem 0.5rem;
+                        border-radius: $std-radius;
+                        align-self: center;
                         &>*{
                             color: $background-color-secondary;
                         }
