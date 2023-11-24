@@ -36,7 +36,7 @@ export default function Header() {
                         <ul>
                             {loggedUser ? (
                                 <li onClick={loggout}>
-                                    LOGOUT
+                                    <span>LOGOUT</span>
                                 </li>
                             ) : (
                                 <li>

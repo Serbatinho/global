@@ -1,7 +1,21 @@
 @import '../../assets';
 
 .full-content-container{
-    @include oneview-container;
+    @include ilimitedview-container;
     background-color: $background-color;
+
+    .mid-content-container{
+
+        .content-container{
+            background-color: $background-color-secondary;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+    }
 
 }
