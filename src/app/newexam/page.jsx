@@ -36,13 +36,9 @@ export default function Newexam() {
 
     const [classificacao, setClassificacao] = useState('');
     const [especificacao, setEspecificacao] = useState('');
-    // const [exame, setExame] = useState('');
     const [laboratorio, setLaboratorio] = useState('');
     const [paciente, setPaciente] = useState('');
-    // const [resultado, setResultado] = useState('');
     const [tipo, setTipo] = useState('');
-    // const [nomelab, setNomelab] = useState('');
-    // const [nometipo, setNometipo] = useState('');
     const [parametro1, setParametro1] = useState('');
     const [parametro2, setParametro2] = useState('');
     const [parametro3, setParametro3] = useState('');
@@ -75,16 +71,10 @@ export default function Newexam() {
             console.log(labOption)
         }
 
-        // eu preciso de um json com o id principal do usuario lá no Login, de tipo de exame e do lab
-        // especialização do exame
-        // glicemia precisa de 10 parametro e hemograma precisa de 11 parametros retornando em um json para retornar ao ronald 
-        // ter classificação no cadastro mocada - por ultimo
-
         fetchData();
     }, []);
 
     useEffect(() => {
-        // setNewExam(labOption.filter(objeto => objeto.ID_PACIENTE === loggedUser.id));
     }, [labOption, examOption])
 
     const handleLabChange = (e) => {
@@ -101,13 +91,9 @@ export default function Newexam() {
         let newexam = {
             "DS_CLASSIFICACAO": classificacao,
             "DS_ESPECIALIZACAO": especificacao,
-            // "ID_EXAME": exame,
             "ID_LABORATORIO": laboratorio,
             "ID_PACIENTE": paciente,
-            // "ID_RESULTADO": resultado,
             "ID_TIPO": tipo,
-            // "NM_LABORATORIO": nomelab,
-            // "NM_TIPO": nometipo,
             "VL_PARAMETRO_1": parametro1,
             "VL_PARAMETRO_2": parametro2,
             "VL_PARAMETRO_3": parametro3,
@@ -285,22 +271,10 @@ export default function Newexam() {
                             Laboratório:
                             <input type="text" name="laboratorio" value={laboratorio} onChange={handleInputChange} />
                         </label>
-                        {/* <label>
-                            Resultado:
-                            <input type="text" name="resultado" value={resultado} onChange={handleInputChange} />
-                        </label> */}
                         <label>
                             Tipo:
                             <input type="text" name="tipo" value={tipo} onChange={handleInputChange} />
                         </label>
-                        {/* <label>
-                            Nome do Laboratório:
-                            <input type="text" name="nomelab" value={nomelab} onChange={handleInputChange} />
-                        </label>
-                        <label>
-                            Nome do Tipo:
-                            <input type="text" name="nometipo" value={nometipo} onChange={handleInputChange} />
-                        </label> */}
                         <label>
                             Parâmetro 1:
                             <input type="text" name="parametro1" value={parametro1} onChange={handleInputChange} />
@@ -369,7 +343,6 @@ export default function Newexam() {
                             Parâmetro 17:
                             <input type="text" name="parametro17" value={parametro17} onChange={handleInputChange} />
                         </label>
-                        {/* <input type="submit" value="Enviar" /> */}
 
 
                         <button type="submit" onClick={handleButtonClick} >Enviar</button>

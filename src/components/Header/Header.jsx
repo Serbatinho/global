@@ -48,22 +48,16 @@ export default function Header() {
                             {loggedUser ? (
 
                                 <li>
-                                    <Link href="/myexams">
-                                        MEUS EXAMES
+                                    <Link href="/newexam">
+                                        CADASTRAR EXAME
                                     </Link>
                                 </li>
                             ) : (
                                 ''
                             )}
                             <li>
-                                <Link href="/newexam">
-                                    CADASTRAR EXAME
-                                </Link>
-                            </li>
-                            <li>
                                 <Link href="/recommendation">
                                     RECOMENDAÇÕES EXAMES
-                                    {/* Adicionar recomendação ao exame */}
                                 </Link>
                             </li>
                         </ul>
