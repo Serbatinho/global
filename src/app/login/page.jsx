@@ -27,7 +27,6 @@
 "use client";
 import { useState } from 'react';
 import styles from '../../styles/layout/app/login/login.module.scss';
-import { headers } from 'next/headers';
 
 export default function Newexam() {
     const [email, setEmail] = useState('');
@@ -35,29 +34,27 @@ export default function Newexam() {
 
     const enviarLogin = async (event) => {
         event.preventDefault();
-
-        async function enviarLogin() {
-            try {
-                const response = await fetch(`http://localhost:3000/api/user/login`, {
-                    method: 'POST',
-                    headers: { "Content-Type": "application/json" }
+        let obj = {"email": email, "password": password}
+        try {
+            const userResponse = await fetch('http://localhost:3000/api/user/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
                 },
-
-                );
-                const user = await response.json();
-
-                if (!user) {
-                    console.error('Usuário não encontrado');
-                    return;
-                }
-
-                console.log(user);
-            } catch (error) {
-                console.error('Erro ao buscar usuário', error);
+                body: JSON.stringify(obj)
+            });
+            if (!userResponse.ok) {
+                throw new Error(`HTTP error! status: ${userResponse.status}`);
             }
-
+            const user = await userResponse.json();
+            console.log(user)
+            // TODO Armazenar em session storage o objeto recebido, tirar um meu console.log
+            // TODO pensar na ação a ser realizada após isso, navigate e etc
+            alert("Login realizado com sucesso!");
+        } catch (error) {
+            console.error('Fetch failed:', error);
+            alert("Falha no login!");
         }
-        enviarLogin()
     };
 
     const handleEmailChange = (event) => {
