@@ -55,9 +55,6 @@ export default function Newexam() {
             sessionStorage.setItem('user', JSON.stringify(user));
             window.location.reload();
 
-            // console.log(user)
-            // TODO Armazenar em session storage o objeto recebido, tirar um meu console.log
-            // TODO pensar na ação a ser realizada após isso, navigate e etc
             alert("Login realizado com sucesso!");
         } catch (error) {
             console.error('Fetch failed:', error);
