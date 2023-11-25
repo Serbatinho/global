@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#######################################
 
-## Getting Started
+# Projeto Next.js de Gerenciamento de Exames Médicos
 
-First, run the development server:
+#######################################
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Páginas Disponíveis
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este projeto possui as seguintes páginas:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Login
+- Novo Exame
+- Recomendações
+- Home
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Credenciais de Acesso
 
-## Learn More
+Para acessar as páginas:
 
-To learn more about Next.js, take a look at the following resources:
+- Email: silvaa_joao@gmail.com
+- Senha: js556677
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Requisitos para Funcionamento
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Este projeto depende das seguintes APIs:
 
-## Deploy on Vercel
+- API em Python
+- API em Java
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Banco de Dados
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+As credenciais atuais do banco de dados são:
+
+- URL: jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl
+- Usuário: rm552466
+- Senha: 160297
+
+Se ocorrerem muitos erros 500, é recomendável trocar as credenciais do banco de dados, pois o servidor pode não ser muito constante.
+
+## Sistema de Gerenciamento de Exames Médicos
+
+Este projeto é um sistema desenvolvido para gerenciar exames médicos em um ambiente de laboratório ou clínica. Ele permite o cadastro de novos exames com diferentes parâmetros, como especialização e valores específicos. Além disso, oferece funcionalidades para consultar e excluir recomendações associadas aos exames já realizados.
+
+O sistema se conecta a um banco de dados Oracle para armazenar informações sobre os exames, resultados e recomendações. Oferece métodos para realizar operações CRUD (Criar, Ler, Atualizar e Deletar) nos dados, proporcionando uma interface para manipular e visualizar informações relacionadas aos exames médicos.
+
+## Funcionalidades Principais
+
+- Cadastro de novos exames com diferentes tipos e parâmetros.
+- Consulta de resultados de exames realizados, exibindo informações detalhadas.
+- Atualização e exclusão de recomendações relacionadas aos exames.
+
+## Integrantes
+
+- Lucas Serbato de Barros
+
+  - RM: 551821-1TDSS
+  - Cargo: Web Developer
+
+- Gustavo Carvalho Noia
+
+  - RM: 552466-1TDSS
+  - Cargo: Java Developer
+
+- Ronald de Oliveira
+
+  - RM: 552364-1TDSS
+  - Cargo: Python Developer
+
+- Vitor Teixeira
+
+  - RM: 552228-1TDSPV
+  - Cargo: AI&PHP Developer
+
+- Nicolly de Almeida
+  - RM: 552579-1TDSS
+  - Cargo: DB&Portugol Developer
+
+## Git do Projeto
+
+Para acessar o repositório do projeto no GitHub, acesse: https://github.com/Serbatinho/global
