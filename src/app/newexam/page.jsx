@@ -235,7 +235,7 @@ export default function Newexam() {
                             ))}
                         </select>
 
-                        <h2>Detalhes do Laboratório:</h2>
+                        <h3>Detalhes do Laboratório:</h3>
                         <label htmlFor="LabOptionSelect">Laboratório:</label>
                         <select id="LabOptionSelect" name="LabOptionSelect" onChange={handleInputChange}>
                             {labOption.map(lab => (
@@ -266,14 +266,6 @@ export default function Newexam() {
                         <label>
                             Especificação:
                             <input type="text" name="especificacao" value={especificacao} onChange={handleInputChange} />
-                        </label>
-                        <label>
-                            Laboratório:
-                            <input type="text" name="laboratorio" value={laboratorio} onChange={handleInputChange} />
-                        </label>
-                        <label>
-                            Tipo:
-                            <input type="text" name="tipo" value={tipo} onChange={handleInputChange} />
                         </label>
                         <label>
                             Parâmetro 1:
