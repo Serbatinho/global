@@ -2,7 +2,7 @@
 @import '../../../common';
 
 .full-content-container{
-    @include oneview-container;
+    @include ilimitedview-container;
     background-color: $background-color;
 
     .mid-content-container{

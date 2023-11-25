@@ -1,6 +1,7 @@
-import styles from '../styles/layout/app/Home/home.module.scss'
+"use client";
+import styles from '../styles/layout/app/Home/home.module.scss';
 
-export default async function Home() {
+export default function Home() {
 
   return (
     <main className={`${styles['full-content-container']}`}>
@@ -40,5 +41,5 @@ export default async function Home() {
         </div>
       </div>
     </main>
-  )
+  );
 }

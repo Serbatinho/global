@@ -5,7 +5,7 @@ function Logo({ fontSize, fatherStyle }) {
     return (
         <div className={`${styles['logo-container']} ${fatherStyle}`}>
             <Link href="/">
-                <h1 className={`${styles['logo']}`} style={{ fontSize: fontSize }}>EQUIPE</h1>
+                <h1 className={`${styles['logo']}`} style={{ fontSize: fontSize }}>HealthIA</h1>
             </Link>
         </div>
     );

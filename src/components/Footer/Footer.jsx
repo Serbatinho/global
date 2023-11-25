@@ -20,7 +20,7 @@ export default function Footer() {
                         <div>
                             <dt>Gustavo Carvalho Noia</dt>
                             <dd>RM: 552466-1TDSS</dd>
-                            <dd>Cargo: JavaScript Developer</dd>
+                            <dd>Cargo: Java Developer</dd>
                         </div>
 
                         <div>
@@ -32,13 +32,13 @@ export default function Footer() {
                         <div>
                             <dt>Vitor Teixeira</dt>
                             <dd>RM: 552579-1TDSPV</dd>
-                            <dd>Cargo: AI Developer</dd>
+                            <dd>Cargo: AI&PHP Developer</dd>
                         </div>
 
                         <div>
                             <dt>Nicolly de Almeida</dt>
                             <dd>RM: 552228-1TDSS</dd>
-                            <dd>Cargo: DB Developer</dd>
+                            <dd>Cargo: DB&Portugol Developer</dd>
                         </div>
                     </dl>
 

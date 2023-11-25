@@ -1,10 +1,29 @@
+"use client";
+
 import Link from 'next/link';
 
 import styles from '../../styles/layout/components/Header/header.module.scss'
 import Logo from '../Logo/Logo'
+import { useEffect, useState } from 'react';
 
 
 export default function Header() {
+
+    const [loggedUser, setLoggedUser] = useState(null);
+
+    useEffect(() => {
+        if (sessionStorage.getItem('user') === null) {
+            setLoggedUser(null);
+        } else {
+            setLoggedUser(JSON.parse(sessionStorage.getItem('user')));
+        }
+    }, []);
+
+    const loggout = () => {
+        sessionStorage.removeItem('user');
+        window.location.reload();
+    };
+
     return (
         <header className={`${styles['full-content-container']}`}>
             <div className={`${styles['mid-content-container']}`}>
@@ -15,36 +34,30 @@ export default function Header() {
 
                     <div className={`${styles['header-linktree']}`}>
                         <ul>
-                            <li>
-                                <Link href="/login">
-                                    LOGIN
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/register">
-                                    MEUS EXAMES
-                                    {/* Visualizar exames ja cadastrados */}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/newexam">
-                                    CADASTRAR EXAME
-                                </Link>
-                            </li>
+                            {loggedUser ? (
+                                <li onClick={loggout}>
+                                    <span>LOGOUT</span>
+                                </li>
+                            ) : (
+                                <li>
+                                    <Link href="/login">
+                                        FAÇA LOGIN
+                                    </Link>
+                                </li>
+                            )}
+                            {loggedUser ? (
+
+                                <li>
+                                    <Link href="/newexam">
+                                        CADASTRAR EXAME
+                                    </Link>
+                                </li>
+                            ) : (
+                                ''
+                            )}
                             <li>
                                 <Link href="/recommendation">
                                     RECOMENDAÇÕES EXAMES
-                                    {/* Adicionar recomendação ao exame */}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/register">
-                                    CADASTRO
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/">
-                                    EXAME
                                 </Link>
                             </li>
                         </ul>

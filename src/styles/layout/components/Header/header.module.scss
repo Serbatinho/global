@@ -25,7 +25,7 @@
 }
 
 .logo-container{
-    margin: 0.5rem 0px;
+    margin: 0.75rem 0px;
 }
 
 .header-linktree{
@@ -36,15 +36,79 @@
     // margin: 0.5rem 0px;
     ul{
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
-
-        a{
+        
+        a, span{
+            max-height: 59px;
             @include std-button;
-            p{
-                margin: 0px;
+            text-align: center;
+            // p{
+                //     margin: 0px;
+                // }
+        }
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .header-linktree{
+
+        ul{
+            display: flex;
+            flex-direction: flex-end;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+
+            a, span{
+                padding: 0.5rem 1.2rem 0.4rem 1.2rem;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .full-content-container{
+        .mid-content-container{
+            .content-container{
+                max-width: 70vw;
+                flex-direction: column;
             }
         }
     }
+
+    .logo-container{
+        margin-bottom: 1rem;
+        &>*{
+            font-size: 0.8rem;
+        }
+    }
+
+    .header-linktree{
+        padding: 0.25rem;
+        margin: 0.5rem 0px;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            a, span{
+                padding: 0.5rem 1.2rem 0.4rem 1.2rem;
+            }
+
+        }
+
+    }
+
+
+    
 }
 
 @media screen and (max-width: 700px) {
@@ -57,9 +121,10 @@
         }
     }
 
-    .logo-container{   
+    .logo-container{
+        margin-bottom: 1rem;
         &>*{
-            font-size: 0.5rem;
+            font-size: 0.8rem;
         }
     }
 
@@ -67,12 +132,14 @@
         padding: 0.25rem;
         margin: 0.5rem 0px;
 
-
         ul{
             display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
             gap: 1rem;
 
-            a{
+            a, span{
                 padding: 0.5rem 1.2rem 0.4rem 1.2rem;
             }
 

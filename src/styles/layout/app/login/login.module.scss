@@ -1,14 +1,58 @@
 @import '../../assets';
+@import '../../../common';
 
 .full-content-container{
     @include oneview-container;
     background-color: $background-color;
 
-    form{
-        &>*{
-            color: $background-color-secondary;
-            &>*{
-                color: $background-color-secondary;
+    .mid-content-container{
+        
+        .content-container{
+            background-color: $background-color-secondary;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem 0;
+            max-width: 400px;
+
+            form{
+                gap: 1rem 0;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5%;
+
+                    label{
+                        font-weight: bold;
+                    }
+
+                    input{
+                        color: $background-color-secondary;
+                        max-width: 1vw;
+                        min-width: 280px;
+                        margin-top: 0.5rem;
+                        height: 1.75rem;
+                        font-size: 1.5rem;
+                        padding: 0.25rem 0.5rem;
+                        border-radius: $std-radius;
+                        align-self: center;
+                        &>*{
+                            color: $background-color-secondary;
+                        }
+                    }
+
+                }
+
+
+                button{
+                    @include std-button;
+                    margin-top: 1rem;
+                }
             }
         }
     }
