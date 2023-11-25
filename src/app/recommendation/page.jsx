@@ -79,7 +79,6 @@ export default function Recommendation() {
             <div className={`${styles['mid-content-container']}`}>
                 <div className={`${styles['content-container']}`}>
                     <h1>RECOMENDAÇÕES</h1>
-                    <button >Exibir loggedUser</button>
                     {recom && (
                         <div>
                             <select onChange={handleInputChange} id="RecomOptionSelect" name="RecomOptionSelect">
